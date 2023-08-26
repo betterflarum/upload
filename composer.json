@@ -1,0 +1,67 @@
+{
+    "name": "betterflarum/upload",
+    "description": "The next era of file upload extension for the Flarum forum.",
+    "keywords": [
+        "flarum"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "BetterFlarum",
+            "email": "BetterFlarum@vnpedl.eu.org",
+            "homepage": "https://vnpedl.eu.org/"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/FriendsOfFlarum/upload/issues",
+        "source": "https://github.com/FriendsOfFlarum/upload",
+        "forum": "https://vnpedl.eu.org/"
+    },
+    "homepage": "https://vnpedl.eu.org/",
+    "funding": [
+        {
+            "type": "website",
+            "url": "https://vnpedl.eu.org/"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "ext-json": "*",
+        "enshrined/svg-sanitize": "^0.15.4",
+        "flarum/core": "^1.2.0",
+        "guzzlehttp/guzzle": "^6.0 || ^7.0",
+        "ramsey/uuid": "^3.5.2 || ^4",
+        "softcreatr/php-mime-detector": "^3.0"
+    },
+    "replace": {
+        "flagrow/upload": "*"
+    },
+    "suggest": {
+        "league/flysystem-aws-s3-v3": "Uploads to AWS S3 using API version 3.",
+        "overtrue/flysystem-qiniu": "Uploads to QiNiu using API."
+    },
+    "require-dev": {
+        "league/flysystem-aws-s3-v3": "^1.0",
+        "overtrue/flysystem-qiniu": "1.0.4"
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "ABetter Upload",
+            "category": "feature",
+            "icon": {
+                "name": "fa fa-cloud-arrow-up",
+                "backgroundColor": "#0078d4",
+                "color": "#FFF"
+            }
+        },
+        "flagrow": {
+            "discuss": "https://vnpedl.eu.org/"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "FoF\\Upload\\": "src/"
+        }
+    }
+}
